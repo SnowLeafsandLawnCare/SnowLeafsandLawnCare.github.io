@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Snow Shoveling Service</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            font-family: 'Bubblegum Sans', sans-serif;
+        }
+
+        nav {
+            background-color: #2c7ffc;
+            padding: 1.5vw;
+            color: white;
+            text-align: center;
+        }
+
+        nav h1 {
+            font-size: 3vw;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 3vw auto;
+            padding: 2vw;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            font-size: 2.5vw;
+            color: #333;
+        }
+
+        .container p {
+            font-size: 1.5vw;
+            color: #555;
+            margin: 1vw 0;
+        }
+
+        .price {
+            font-size: 3vw;
+            font-weight: bold;
+            color: #2c7ffc;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 2vw;
+            padding: 1vw 2vw;
+            background-color: #2c7ffc;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5vw;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta:hover {
+            background-color: #1b5ec9;
+        }
+
+        footer {
+            margin-top: 3vw;
+            padding: 2vw;
+            background-color: #f0f0f0;
+            color: #555;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container h2 {
+                font-size: 5vw;
+            }
+
+            .container p {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Buy Snow Shoveling Service</h1>
+    </nav>
+
+    <div class="container">
+        <h2>You're buying <span id="service"></span> Shoveling</h2>
+        <p>The cost for this service is: <span class="price" id="price"></span></p>
+        <a href="#" class="cta">Proceed to Payment</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Snow Shoveling Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const service = urlParams.get('service');
+        const price = urlParams.get('price');
+
+        // Display service and price on the page
+        document.getElementById('service').innerText = service || 'Unknown';
+        document.getElementById('price').innerText = `$${price || '0'}`;
+    </script>
+
+</body>
+</html>
